@@ -1,0 +1,84 @@
+h1 {
+	font-family: "Amatic SC";
+	font-size: 70px;
+	margin-top: 20px;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
+.difficulty {
+	width: 140px;
+	font-size: 40px;
+	border: 4px solid black;
+	color: black;
+	background-color: white;
+	font-family: "Amatic SC";
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#playBtn {
+	width: 140px;
+	font-size: 40px;
+	border: 4px solid black;
+	color: black;
+	background-color: white;
+	font-family: "Amatic SC";
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: black;
+	color: white;
+}
+
+#playBtn:hover {
+	background-color: black;
+	color: white;
+}
+
+#nav:hover {
+	background-color: black;
+	color: white;
+}
+
+#nav {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width:60px;
+	height:60px;
+	margin: 5px;
+	border: 3px solid black; 
+	background-color: white;
+	color: black;
+	font-family: Amatic SC;
+	font-weight: bold; 
+	font-size: 30px;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+#page {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+#outsideBar {
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	width: 60%;
+	height: 30px;
+	background-color: white;
+	border: 3px solid black;
+}
+
+#insideBar {
+	width: 0%;
+	height: 30px;
+	background-color: black;
+}

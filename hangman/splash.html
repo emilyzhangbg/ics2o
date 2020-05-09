@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Emily's Hangman Game</title>
+<!--
+Emily Zhang
+May 7th, 2020
+Hangman
+
+Note:
+  Preferably with internet
+  Sound On
+  Works best with Chrome and Firefox
+-->
+<!--imports the font Amatic SC-->
+<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+<!--imports the stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/splashstyle.css">
+<!--imports the script-->
+<script type = "text/javascript" src = "js/splashscript.js"></script>
+</head>
+
+<audio id = "buttonClick">
+  <source src="sounds/correctletter.mp3" type="audio/mpeg">
+</audio>
+
+<body onload = "onLoad(); progressBar()">
+<div id = "page">
+  <div id = "outsideBar">
+	<div id = "insideBar"></div>
+  </div>
+</div>
+
+<center>
+<h1>EMILY'S HANGMAN GAME</h1>
+
+<!--buttons to choose the difficulty-->
+<button class = "difficulty" id = "EASY" onclick = "selectDifficulty('EASY')">EASY</button>
+<button class = "difficulty" id = "MEDIUM" onclick = "selectDifficulty('MEDIUM')">MEDIUM</button>
+<button class = "difficulty" id = "HARD" onclick = "selectDifficulty('HARD')">HARD</button>
+<br><br>
+<div id = "logo"><img src = "images/hangmanlogo.JPG" width = "250px;"></div>
+<br><br>
+
+<!--play button when pressed brings the user to the index screen and stores the difficulty in local storage-->
+<a href = "otherpages/index.html"><button id = "playBtn" onclick = "store()">Play</button></a>
+</center>
+
+<!--brings the user to the info page-->
+<a href = "otherpages/info.html"><button id = "nav">?</button>
+
+</body>
+</html>

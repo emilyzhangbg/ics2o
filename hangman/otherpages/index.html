@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>Emily's Hangman Game</title>
+<!--imports the font Amatic SC-->
+<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+<!--importing the stylesheet-->
+<link rel="stylesheet" type="text/css" href="../css/indexstyle.css">
+<!--importing icons-->
+<script src="https://kit.fontawesome.com/fa71e0d9bb.js" crossorigin="anonymous"></script>
+<!--importing the script-->
+<script type = "text/javascript" src = "../js/indexscript.js"></script>
+</head>
+
+<!--when the page loads, load the page with the neccessary components and creates the keyboard-->
+<body onload = "loadPage(); createKeyboard()">
+
+<!--sound effect files-->
+<audio id="tick">
+  <source src="../sounds/clockticking.mp3" type="audio/mpeg">
+</audio>
+
+<audio id = "win">
+  <source src="../sounds/win.mp3" type="audio/mpeg">
+</audio>
+
+<audio id = "lose">
+  <source src="../sounds/lose.mp3" type="audio/mpeg">
+</audio>
+
+<audio id = "correctLetter">
+  <source src="../sounds/correctletter.mp3" type="audio/mpeg">
+</audio>
+
+<audio id = "wrongLetter">
+  <source src="../sounds/wrongletter.mp3" type="audio/mpeg">
+</audio>
+
+
+<!--a table which acts as an alert when the user wins or loses a game or the time's up-->
+<table id = "alertTable">
+  <tr>
+	<td colspan = "2">
+	  <div id = "alert">
+		<p id = "message" align = "center">Welcome</p>
+	  </div>
+	</td>
+  </tr>
+  <tr>
+	<td align = "center">
+	  <button id = "nextGame" class = "doneBtn" onclick = "replayBtn()">Next Game</button>
+	</td>
+	<td align = "center">
+	  <a href = "../splash.html"><button class = "doneBtn">Exit</button></a>
+	</td>
+  </tr>
+</table>
+
+<!--a table that acts as an alert that welcomes the user and takes the user's name-->
+<table id = "welcomeAlertTable">
+  <tr>
+	<td colspan = "2">
+	  <div id = "welcomeAlert">
+		<p id = "welcomeMessage" align = "center">
+		Welcome to Emily's Hangman Game<br>
+		What is your name?<br>
+		<input type="text" id="userName" name="firstname" placeholder="Your name.."></input>
+		</p>
+	  </div>
+	</td>
+  </tr>
+  <tr>
+	<td align = "center">
+	  <button class = "doneBtn" id = "start" onclick = "greeting()">Next</button>
+	</td>
+	<td align = "center">
+	  <a href = "../splash.html"><button class = "doneBtn">Cancel</button></a>
+	</td>
+  </tr>
+</table>
+
+
+<!--the table that formats the header-->
+<table width = "93%" class = "heading" align = "center">
+  <tr>
+	<td>
+	  <!--the logo-->
+	  <img src = "../images/hangmanlogo.JPG" width = "100px" height = "115px">
+	</td>
+	<td>
+	  <h1>Emily's Hangman Game</h1>
+	</td>
+	<td>
+	  <p id = "bestScore">Best: 0</p>
+	</td>
+	<td>
+	  <table>
+		<tr>
+		  <!--win/total games-->
+		  <td>
+			<p id = "winPara">0</p>
+		  </td>
+		  <td>
+			<p>/</p>
+		  </td>
+		  <td>
+			<p id = "totalPara">0</p>
+		  </td>
+		</tr>
+	  </table>
+	</td>
+	<td width = "70px" colspan = "2">
+	  <!--timer-->
+	  <p id = "time">time: 2:00</p>
+	</td>
+	<td>
+	  <!--number of tries-->
+	  <i class="fa fa-heart-o"></i>
+	</td>
+	<td>
+	  <p id = "tries">7</p>
+	</td>
+  </tr>
+</table>
+
+<!--table that formats the page-->
+<table width = "100%" id = "game">
+  <tr align = "center">
+	<td>
+	  <!--the empty dashes for the word-->
+	  <div id = "blanks"></div>
+	</td>
+	<td rowspan = 2>
+	  <!--the picture of the hangman-->
+	  <div id= "picBox"><img id = "image" src="../images/Hangman1.png" height="400px" width="300px"></div>
+	</td>
+  </tr>
+  <tr align = "center" valign = "top">
+	<td>
+	  <!--the keyboard-->
+	  <div id = "keyboard"></div>
+	</td>
+  </tr>
+</table>
+
+<!--button back to the home screen-->
+<a href = "../splash.html"><button id = "navBtn"><i class='fas fa-home'></i></button></a>
+</body>
+</html>

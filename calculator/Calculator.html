@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script type='text/javascript' src='scriptsheet.js'></script>
+</head>
+<body>
+<center>
+<h1>The Calculator</h1>
+<table border = "0" cellpadding="4">
+	<tr>
+		<td colspan="5">
+		<input type="text" id="screen" style="width:525px;height:65px;font-size:35px;" >
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<button class="funcButtons" type="button" onclick="addPI()" id="bNum">PI</button>
+		</td>
+		<td>
+		<button class="funcButtons" type="button" onclick="noEqualOperation('1/x')" id="bOperation">1/x</button>
+		</td>
+		<td>
+		<button class="funcButtons" type="button" onclick="noEqualOperation('R')" id="bOperation">sqrt</button>
+		</td>
+		<td>
+		<button class="funcButtons" type="button" onclick="setSign('^')" id="bOperation">^</button>
+		</td>
+		<td>
+		<button class="clearButton" type="button" onclick="setClear()" id="clearOperation">C</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<button class="funcButtons" type="button" onclick="noEqualOperation('sin')" id="bOperation">sin</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(7)" id="bNum">7</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(8)" id="bNum">8</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(9)" id="bNum">9</button>
+		</td>
+		<td>
+		<button class="operButtons" type="button" onclick="setSign('+')" id="bOperation">+</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<button class="funcButtons" type="button" onclick="noEqualOperation('cos')" id="bOperation">cos</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(4)" id="bNum">4</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(5)" id="bNum">5</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(6)" id="bNum">6</button>
+		</td>
+		<td>
+		<button class="operButtons" type="button" onclick="setSign('-')" id="bOperation">-</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<button class="funcButtons" type="button" onclick="noEqualOperation('tan')" id="bOperation">tan</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(1)" id="bNum">1</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(2)" id="bNum">2</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(3)" id="bNum">3</button>
+		</td>
+		<td>
+		<button class="operButtons" type="button" onclick="setSign('*')" id="bOperation">x</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<button class="funcButtons" type="button" onclick="noEqualOperation('%')" id="bOperation">%</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNum(0)" id="bNum">0</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addDecimal()" id="bDec">.</button>
+		</td>
+		<td>
+		<button class="numButtons" type="button" onclick="addNegative()" id="bNeg">(+/-)</button>
+		</td>
+		<td>
+		<button class="operButtons" type="button" onclick="setSign('/')" id="bOperation">/</button>
+		</td>
+	</tr>
+	<tr>
+		<td colspan = "5">
+		<button class="equalButton" type="button" onclick="equalPressed()" id="bEqual">=</button>
+		</td>
+	</tr>
+</table>
+</center>
+</body>
+</html> 
